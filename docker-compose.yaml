@@ -116,7 +116,7 @@ services:
     env_file:
       - ./hadoop.env
     ports:
-      - 8889:8888
+      - 8888:8888
     volumes:
       - ./hadoop_conf/etc:/opt/hadoop/etc
     command: ["jupyter", "notebook", "--allow-root", "--ip", "0.0.0.0"]
@@ -129,7 +129,7 @@ services:
 #    env_file:
 #      - ./hadoop.env
 #    ports:
-#      - 8081:8080
+#      - 8080:8080
 #    volumes:
 #      - ./hadoop_conf/etc:/opt/hadoop/etc
 #      - ./hive_conf:/opt/hive/conf
