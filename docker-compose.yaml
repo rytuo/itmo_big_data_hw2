@@ -90,7 +90,7 @@ services:
       - 9083
     volumes:
       - ./hadoop_conf/etc:/opt/hadoop/etc
-      - /Users/vladimir.ermakov/Projects/docker-hadoop/build/conf:/opt/hive/conf
+      - ./hive_conf:/opt/hive/conf
 
   hiveserver2:
     build:
@@ -107,7 +107,7 @@ services:
       - 10002
     volumes:
       - ./hadoop_conf/etc:/opt/hadoop/etc
-      - /Users/vladimir.ermakov/Projects/docker-hadoop/build/conf:/opt/hive/conf
+      - ./hive_conf:/opt/hive/conf
 
   jupyter:
     build:
@@ -132,7 +132,7 @@ services:
 #      - 8081:8080
 #    volumes:
 #      - ./hadoop_conf/etc:/opt/hadoop/etc
-#      - /Users/vladimir.ermakov/Projects/docker-hadoop/build/conf:/opt/hive/conf
+#      - ./hive_conf:/opt/hive/conf
 #    command: ["bash", "/opt/zeppelin/bin/zeppelin.sh"]
 
 networks:
